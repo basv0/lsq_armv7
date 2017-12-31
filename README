@@ -1,0 +1,14 @@
+Functions for least square parametrical identification.
+
+mnk_optim is based upon direc matrix operation for lsq 
+and is optimized for speed
+
+mnk_neonh is the same function as above but uses intrinsics
+for Armv7 NEON and so called horizontal vectorization
+
+mnk_neonv also uses intrinsics for Armv7 NEON and but instead
+of horizontal implements verticacal vectorization
+
+ident3.dat sample file with the experimental data that
+are used for parametrical identification of the object
+of control. The order of object is equal to 3.
