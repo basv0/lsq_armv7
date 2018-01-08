@@ -14,7 +14,7 @@ vector Y and fills them with the data.
         printf("file %s not found\n", argv[2]);      \
         return 2;                                    \
     }                                                \
-    std::vector<float> yV,uV,tV;                     \
+    std::vector<double> yV,uV,tV;                    \
     char syu[80];                                    \
     double u,y,t;                                    \
     while(fgets(syu,80,yu)){                         \
@@ -24,15 +24,15 @@ vector Y and fills them with the data.
         tV.push_back(t);                             \
     }                                                \
     N=(yV.size()-M);                                 \
-    X=new float*[N];                                 \
-    Xt=new float*[2*M];                              \
-    A=new float[2*M];                                \
-    Y=new float[N];                                  \
+    X=new double*[N];                                \
+    Xt=new double*[2*M];                             \
+    A=new double[2*M];                               \
+    Y=new double[N];                                 \
     for(int i=0;i<N;i++){                            \
-        X[i]= new float[2*M];                        \
+        X[i]= new double[2*M];                       \
     }                                                \
     for(int j=0;j<2*M;j++){                          \
-        Xt[j]=new float[N];                          \
+        Xt[j]=new double[N];                         \
     }                                                \
     for(int i=0;i<N;i++){                            \
         Y[i]= yV[i+M];                               \
@@ -52,5 +52,5 @@ vector Y and fills them with the data.
     yV.clear();                                      \
     uV.clear();                                      \
     tV.clear();                                      \
-                                    
+    
 #endif
