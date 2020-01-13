@@ -24,7 +24,7 @@
 #include <vector>
 
 const int Vs=4; //size of vector
-
+//for left-overs, extened matrices with the sizes multiple to 4 are used
 inline void mnk(int N, int Nr, int M, int Mr, float **X, float **Xt, float *Y, float *A, float **S, float *Q){
     
     float zero=0.0;
